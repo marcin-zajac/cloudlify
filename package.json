@@ -13,5 +13,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-validator": "^6.6.1"
+  },
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   }
 }

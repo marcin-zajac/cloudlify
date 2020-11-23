@@ -1,0 +1,175 @@
+const CloudsClassification = {
+  Cirrus: {
+    species: ['fibratus', 'uncinus', 'spissatus', 'castellanus', 'floccus'],
+    varieties: ['intortus', 'radiatus', 'vertebratus', 'duplicatus'],
+    supplementaryFeatures: ['mamma', 'fluctus'],
+    accessoryClouds: null,
+    motherAndSpecialClouds: {
+      genitus: ['Cirrocumulus', 'Altocumulus', 'Cumulonimbus', 'Homo'],
+      mutatus: ['Cirrostratus', 'Homo'],
+    },
+  },
+  Cirrocumulus: {
+    species: ['stratiformis', 'lenticularis', 'castellanus', 'floccus'],
+    varieties: ['undulatus', 'lacunosus'],
+    supplementaryFeatures: ['virga', 'mamma', 'cavum'],
+    accessoryClouds: null,
+    motherAndSpecialClouds: {
+      genitus: null,
+      mutatus: ['Cirrus', 'Cirrostratus', 'Altocumulus', 'Homo'],
+    },
+  },
+  Cirrostratus: {
+    species: ['fibratus', 'nebulosus'],
+    varieties: ['duplicatus', 'undulatus'],
+    supplementaryFeatures: null,
+    accessoryClouds: null,
+    motherAndSpecialClouds: {
+      genitus: ['Cirrocumulus', 'Cumulonimbus'],
+      mutatus: ['Cirrus', 'Cirrocumulus', 'Altostratus', 'Homo'],
+    },
+  },
+  Altocumulus: {
+    species: [
+      'stratiformis',
+      'lenticularis',
+      'castellanus',
+      'floccus',
+      'volutus',
+    ],
+    varieties: [
+      'translucidus',
+      'perlucidus',
+      'opacus',
+      'duplicatus',
+      'undulatus',
+      'radiatus',
+      'lacunosus',
+    ],
+    supplementaryFeatures: ['virga', 'mamma', 'cavum', 'fluctus', 'asperitas'],
+    accessoryClouds: null,
+    motherAndSpecialClouds: {
+      genitus: ['Cumulus', 'Cumulonimbus'],
+      mutatus: ['Cirrocumulus', 'Altostratus', 'Nimbostratus', 'Stratocumulus'],
+    },
+  },
+  Altostratus: {
+    species: null,
+    varieties: [
+      'translucidus',
+      'opacus',
+      'duplicatus',
+      'undulatus',
+      'radiatus',
+    ],
+    supplementaryFeatures: ['virga', 'praecipitatio', 'mamma'],
+    accessoryClouds: ['pannus'],
+    motherAndSpecialClouds: {
+      genitus: ['Altocumulus', 'Cumulonimbus'],
+      mutatus: ['Cirrostratus', 'Nimbostratus'],
+    },
+  },
+  Nimbostratus: {
+    species: [],
+    varieties: [],
+    supplementaryFeatures: ['praecipitatio', 'virga'],
+    accessoryClouds: ['pannus'],
+    motherAndSpecialClouds: {
+      genitus: ['Cumulus', 'Cumulonimbus'],
+      mutatus: ['Altocumulus', 'Altostratus', 'Stratocumulus'],
+    },
+  },
+  Stratocumulus: {
+    species: [
+      'stratiformis',
+      'lenticularis',
+      'castellanus',
+      'floccus',
+      'volutus',
+    ],
+    varieties: [
+      'translucidus',
+      'perlucidus',
+      'opacus',
+      'duplicatus',
+      'undulatus',
+      'radiatus',
+      'lacunosus',
+    ],
+    supplementaryFeatures: [
+      'virga',
+      'mamma',
+      'praecipitatio',
+      'fluctus',
+      'asperitas',
+      'cavum',
+    ],
+    accessoryClouds: null,
+    motherAndSpecialClouds: {
+      genitus: ['Altostratus', 'Nimbostratus', 'Cumulus', 'Cumulonimbus'],
+      mutatus: ['Altocumulus', 'Nimbostratus', 'Stratus'],
+    },
+  },
+  Stratus: {
+    species: ['nebulosus', 'fractus'],
+    varieties: ['opacus', 'translucidus', 'undulatus'],
+    supplementaryFeatures: ['praecipitatio', 'fluctus'],
+    accessoryClouds: null,
+    motherAndSpecialClouds: {
+      genitus: [
+        'Nimbostratus',
+        'Cumulus',
+        'Cumulonimbus',
+        'Homo',
+        'Silva',
+        'Cataracta',
+      ],
+      mutatus: ['Stratocumulus'],
+    },
+  },
+  Cumulus: {
+    species: ['humilis', 'mediocris', 'congestus', 'fractus'],
+    varieties: ['radiatus'],
+    supplementaryFeatures: [
+      'virga',
+      'praecipitatio',
+      'arcus',
+      'fluctus',
+      'tuba',
+    ],
+    accessoryClouds: ['pileus', 'velum', 'pannus'],
+    motherAndSpecialClouds: {
+      genitus: ['Altocumulus', 'Stratocumulus', 'Flamma', 'Homo', 'Cataracta'],
+      mutatus: ['Stratocumulus', 'Stratus'],
+    },
+  },
+  Cumulonimbus: {
+    species: ['calvus', 'capillatus'],
+    varieties: null,
+    supplementaryFeatures: [
+      'praecipitatio',
+      'virga',
+      'incus',
+      'mamma',
+      'arcus',
+      'murus',
+      'cauda',
+      'tuba',
+    ],
+    accessoryClouds: ['pannus', 'pileus', 'velum', 'flumen'],
+    motherAndSpecialClouds: {
+      genitus: [
+        'Altocumulus',
+        'Altostratus',
+        'Nimbostratus',
+        'Stratocumulus',
+        'Cumulus',
+        'Flamma',
+        'Homo',
+      ],
+      mutatus: ['Cumulus'],
+    },
+  },
+};
+
+module.exports = CloudsClassification;

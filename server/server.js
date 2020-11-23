@@ -20,6 +20,7 @@ app.get('/api', function (req, res) {
 });
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/image', require('./routes/api/image'));
 app.use('/api/protected', require('./routes/api/protected'));
 
 app.listen(PORT, () =>
